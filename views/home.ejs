@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap" rel="stylesheet">
+    <title>Landing Page</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-1">
+                <li>
+                    <span>Shop</span>
+                </li>
+            </ul>
+
+            <ul class="nav-2">
+                <li>Home</li>
+                <li>New</li>
+                <li>Collection</li>
+                <li>Products</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-section">
+            
+            <section class="section-1">
+                <h1 class="main-heading">
+                    Echo Dot (3rd Gen)
+                </h1>
+
+                <p class="main-p">
+                    The Echo Dot (3rd Gen) Smart Speaker with Alexa is a hands-free, voice-controlled device that uses Alexa to play music, control smart home devices, provide information, read the s, set alarms, and more.
+                    <br><br>
+                    The latest Amazon Echo Dot (3rd Generation) Smart Speaker with Alexa can hear you from across the room, even while music is playing. When you want to use Echo Dot, just say the wake word "Alexa" and Dot responds instantly. Just ask for music, s, information, and more. You can also call almost anyone and control compatible smart home devices with your voice. If you have more than one Echo or Echo Dot, Alexa responds intelligently from the Echo you're closest to with ESP (Echo Spatial Perception). ESP will be available via a free over-the-air software update, coming soon.
+
+                    <br><br>
+
+                    <ol class="main-list">
+                        <li>3rd Generation Echo Dot with Alexa</li>
+                        <li>Controls lights, fans, switches, thermostats, garage doors, sprinklers, and more with compatible connected devices.</li>
+                        <li>Connects to speakers or headphones through Bluetooth or 3.5 mm stereo cable to play music.</li>
+                        <li>Hears you from across the room with 7 far-field microphones for hands-free control, even in noisy environments or while playing music.</li>
+                    </ol>
+                </p>
+            </section>
+
+            <section class="section-2">
+                <div class="section-img">
+                    <img src="https://cdn1.smartprix.com/rx-i15KCEt8A-w420-h420/amazon-echo-dot-3rd.jpg" alt="Echo Dot Image">
+                </div>
+            </section>
+
+
+        </div>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/CJGShJVa7kY?si=NwDDDzN-JlGZqDaK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        <% if(messages.error){ %>
+            <ul>
+                <li class="message"><%= messages.error %></li>
+            </ul>
+        <% } %>
+
+        <div class="container">
+            <form action="/" method="POST">
+          
+              <label for="fname" class="required">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          
+              <label for="lname" class="required">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          
+              <label for="email" class="required">Email</label>
+              <input type="email" id="email" name="email" placeholder="Your Email..">
+                <br>
+              <label for="subject"class="required">Message</label>
+              <textarea id="subject" name="message" placeholder="Write something.." style="height:200px"></textarea>
+          
+              <input type="submit" value="Submit">
+          
+            </form>
+
+            <!-- Thank you message -->
+            <!-- Thank you message -->
+            <div id="thank-you-message" class="<%= isFormSubmitted ? 'show-message' : 'hide-message' %>">
+                <p class="submission">Thank you for your submission!</p>
+            </div>
+
+          </div>
+
+    </main>
+    
+</body>
+</html>
