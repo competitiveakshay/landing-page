@@ -1,138 +1,179 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Lora', serif;
-    background-color: #A4A4A2;
 }
 
-nav{
-    display: flex;
-    height: 100px;
+body {
+    background-color: #f0f0f0;
 }
 
-nav ul{
-    position: fixed;
-    margin-top: 30px;
+header {
+    background-color: #222;
+    padding: 10px 0;
+}
+
+.nav-1 {
+    margin-top: 0;
     margin-left: 100px;
     list-style: none;
 }
 
-nav ul:nth-of-type(2){
+.nav-1 li{
+    color: white;
+}
+
+.nav-2 {
     display: flex;
     position: fixed;
     right: 150px;
     list-style: none;
     gap: 35px;
+    margin-top: -20px;
 }
 
-.main-section{
+.nav-2 li {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.nav-2 li:hover {
+    cursor: pointer;
+    color: #ff6600; 
+}
+
+.main-section {
     display: flex;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.section-1{
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.main-heading{
-    font-size: 35px;
+.section-1 {
+    flex-basis: 60%;
+    padding: 20px;
 }
 
-.main-p{
+.main-heading {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.main-p {
     margin-top: 15px;
+    font-size: 16px;
 }
 
-.main-list{
+.main-list {
     margin-left: 20px;
 }
 
-nav li:hover{
-    cursor: pointer;
+.section-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-img:hover{
-    cursor: pointer;
+iframe {
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
 }
 
-iframe{
-    margin-top: 35px;
-    margin-left: 60px;
-    align-items: center;
-    width: 90%;
-    height: 600px;
+.container {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-input[type=text], textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    /* border: 1px solid #ccc; Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
-input[type=email]{
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    /* border: 1px solid #ccc; Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-  
-  /* Style the submit button with a specific background color etc */
-input[type=submit] {
-    background-color: #676765;
-    color: white;
+
+input[type="submit"] {
+    background-color: #3a3a3a;
+    color: #fff;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
-  
-  /* When moving the mouse over the submit button, add a darker green color */
-  input[type=submit]:hover {
-    background-color: #151514;
-  }
-  
-  /* Add a background color and some padding around the form */
-  .container {
-    border-radius: 5px;
-    border: 2px solid black;
-    /* background-color: #f2f2f2; */
-    padding: 20px;
-  }
 
-.show-message{
-    display: block;
-}
-
-.hide-message{
-    display: none;
-}
-
-.message{
-    text-align: center;
-    font-size: 50px;
-    font-weight: bold;
-    color: red;
-}
-
-.submission{
-    text-align: center;
-    font-size: 50px;
-    font-weight: bold;
-    color: green;
+input[type="submit"]:hover {
+    background-color: #222;
 }
 
 .required::after {
     content: ' *';
     color: red;
+}
+
+.show-message {
+    display: block;
+}
+
+.hide-message {
+    display: none;
+}
+
+.message {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+}
+
+.submission {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: green;
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+    .main-section {
+        flex-direction: column;
+    }
+    .section-1 {
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .nav-1 {
+        margin-left: 20px;
+    }
+
+    .nav-2 {
+        display: flex;
+        position: static;
+        justify-content: space-between;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .nav-2 li {
+        font-size: 16px;
+    }
 }
